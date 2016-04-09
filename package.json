@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "./node_modules/.bin/webpack --progress --colors",
     "dev": "npm run build && ./node_modules/.bin/webpack-dev-server --no-info --content-base src --inline --hot",
     "deploy": "NODE_ENV=production ./node_modules/.bin/webpack --progress --colors"
@@ -29,6 +29,7 @@
     "react-dom": "^0.14.8"
   },
   "devDependencies": {
+    "jest-cli": "^0.10.0",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   }
