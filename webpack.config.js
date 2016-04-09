@@ -7,7 +7,7 @@ module.exports = {
   devtool: debug ? "inline-sourcemap" : null,
   entry: "./js/app.jsx",
   resolve: {
-    extensions: ['', '.js', '.jsx'] // import  without suffix
+    extensions: ['', '.js', '.jsx'] // import without suffix
   },
   module: {
     loaders: [
