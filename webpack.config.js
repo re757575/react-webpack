@@ -6,10 +6,13 @@ module.exports = {
   context: path.join(__dirname, "src"),
   devtool: debug ? "inline-sourcemap" : null,
   entry: "./js/app.jsx",
+  resolve: {
+    extensions: ['', '.js', '.jsx'] // import  without suffix
+  },
   module: {
     loaders: [
       {
-        test: /\.js[x]?$/,
+        test: /.jsx?$/, // Match both .js and .jsx
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         query: {
