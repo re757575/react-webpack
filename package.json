@@ -9,6 +9,17 @@
     "dev": "npm run build && ./node_modules/.bin/webpack-dev-server --no-info --content-base src --inline --hot",
     "deploy": "NODE_ENV=production ./node_modules/.bin/webpack --progress --colors"
   },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "./node_modules/react",
+      "./node_modules/react-dom",
+      "./node_modules/react-addons-test-utils"
+    ],
+    "moduleFileExtensions": [
+      "","js","jsx"
+    ]
+  },
+  "scriptPreprocessor": "./node_modules/babel-jest",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/re757575/react-webpack.git"
@@ -29,7 +40,9 @@
     "react-dom": "^0.14.8"
   },
   "devDependencies": {
+    "babel-jest": "^10.0.1",
     "jest-cli": "^0.10.0",
+    "react-addons-test-utils": "^0.14.0",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   }
